@@ -1,0 +1,95 @@
+.skills_container {
+  grid-template-columns: repeat(2, 350px);
+  column-gap: 3rem;
+  justify-content: center;
+}
+.skills_content {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 4rem;
+  border-radius: 1, 25rem;
+}
+
+.skills_title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+}
+.skills_box {
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+.skills_group {
+  display: grid;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+.skills_date {
+  display: flex;
+  column-gap: 0.5rem;
+}
+.HTML,
+.CSS,
+.BOOTSTRAP,
+.Tailwindcss,
+.JAVASCRIPT,
+.React {
+  font-size: 1.8rem;
+  color: var(--title-color);
+}
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+}
+.skills__level {
+  font-size: var(--tiny-font-size);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  #Skills{
+    margin-right: var(--mb-2-5);
+    margin-left: var(--mb-2-5);
+  }
+  .skills_container {
+    grid-template-columns: max-content;
+    row-gap: 2rem;
+  }
+}
+/* For medium devices */
+
+@media screen and (max-width: 576px) {
+  .skills_container {
+    grid-template-columns: 1fr;
+  }
+  .skills_content {
+    padding: 1.5rem;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .skills_box {
+    column-gap: 1.25rem;
+  }
+  .skills__name {
+    font-size: var(--small-font-size);
+  }
+}
+
+/* ---- reset ---- */
+#figma,
+#premiere,
+#photoshop,
+#typescript,
+#jquer {
+  width: 30px;
+  color: var(--title-color);
+  font-size: 1.8rem;
+}
+#Skills{
+  font-size: 35px;
+}
