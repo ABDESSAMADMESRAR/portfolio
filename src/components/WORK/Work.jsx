@@ -22,14 +22,13 @@ function Work() {  // Defining the functional component named 'Work'
   }, []);  // Empty dependency array, ensuring that the useEffect runs only once when the component mounts
 
   return (  // JSX syntax to render the component
-    <div>  // A wrapper div to contain the section
-      <section className="section_work work" id="work">  // A section element with classes and id for styling and targeting
-        <br />  // A line break for spacing
-        <h2 className="section__title " id="Portfolio">  // A title for the section, with a specific ID and class for styling
-        Projects  // The content of the title
+    <div>  
+      <section className="section_work work" id="work"> 
+        <br />  
+        <h2 className="section__title " id="Portfolio"> 
         </h2>
-        <span className="section__subtitle" id="section__subtitle">Most recent works</span>  // A subtitle for the section
-    <Works></Works>  // Rendering the 'Works' component inside this section
+        <span className="section__subtitle" id="section__subtitle">Most recent works</span> 
+    <Works></Works>  
       </section>
     </div>
   );

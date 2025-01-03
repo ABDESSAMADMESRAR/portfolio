@@ -40,7 +40,11 @@ function Date() {
           steps={[
             ' Front-end Developer💻',
             1000, // Duration for the first text
-            'UI/UX Design 🎨',
+            'UI/UX Designer 🎨',
+            1000, // Duration for the second text
+            'graphic Designer 🎨',
+            1000, // Duration for the second text
+            'video editor 🎥',
             1000, // Duration for the second text
           ]}
         />

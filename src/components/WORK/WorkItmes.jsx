@@ -20,11 +20,11 @@ function WorkItmes({item}) {  // Defining the functional component 'WorkItmes' t
 
   return (  // JSX syntax to render the component
     <>
-    <div className="work--cards" key={item.id}>  // A container for each work item, with a unique key based on 'item.id'
-      <img src={item.image} className='work--img'></img>  // Displaying the image for the work item
-      <h3 className='work--title' id='work--title'>{item.title}</h3>  // Displaying the title of the work item
-      <a href={item.link} target="_blank" className='work--button'>  // Link to the demo page, opening in a new tab
-        <i class="ri-arrow-right-circle-fill   work--button-icon ">  <b style={{ cursor: 'pointer'}}>Demo </b></i>  // Icon for the button with a "Demo" label
+    <div className="work--cards" key={item.id}> 
+      <img src={item.image} className='work--img'></img>  
+      <h3 className='work--title' id='work--title'>{item.title}</h3>  
+      <a href={item.link} target="_blank" className='work--button'> 
+        <i class="ri-arrow-right-circle-fill   work--button-icon ">  <b style={{ cursor: 'pointer'}}>Demo </b></i>  
       </a>
     </div>
     </>
