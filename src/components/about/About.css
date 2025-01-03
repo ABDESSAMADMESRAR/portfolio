@@ -1,110 +1,128 @@
+/* Button Flex - Sets the width and margin for the button */
 .button_flex {
   width: 30%;
   margin-top: 5%;
 }
+
+/* About container - Defines grid layout with two columns and adds gap between columns */
 .about__container {
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  column-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  align-items: center; /* Align items vertically in the center */
+  column-gap: 4rem; /* Space between columns */
 }
+
+/* About image - Sets the width, border-radius, and center alignment for the image */
 .about_img {
-  width: 350px;
-  border-radius: 1.5rem;
-  justify-self: center;
+  width: 350px; /* Defines image width */
+  border-radius: 1.5rem; /* Rounds the image corners */
+  justify-self: center; /* Centers the image in the grid */
 }
+
+/* About info - Defines a grid layout for the about section's info with 3 columns */
 .about_info {
-  grid-template-columns: repeat(3, 140px);
-  gap: 0.5rem;
-  margin-bottom: var(--mb-2);
+  grid-template-columns: repeat(3, 140px); /* Three columns of 140px each */
+  gap: 0.5rem; /* Adds space between grid items */
+  margin-bottom: var(--mb-2); /* Margin bottom for spacing */
 }
+
+/* About box - Styles the individual info boxes */
 .about_box {
-  background-color: var(--container-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.75rem;
-  text-align: center;
-  padding: 1rem 1.25rem;
-  cursor: pointer;
+  background-color: var(--container-color); /* Sets background color */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Adds border with a slight opacity */
+  border-radius: 0.75rem; /* Rounded corners */
+  text-align: center; /* Centers the text */
+  padding: 1rem 1.25rem; /* Adds padding inside the box */
+  cursor: pointer; /* Changes cursor to pointer on hover */
 }
+
+/* About icon - Defines the size and color for the icon */
 .about_icon {
-  font-size: 1.5rem;
-  color: var(--title-color);
-  margin-bottom: var(--mb-0-5);
+  font-size: 1.5rem; /* Sets font size for the icon */
+  color: var(--title-color); /* Sets the icon color */
+  margin-bottom: var(--mb-0-5); /* Adds margin at the bottom of the icon */
 }
+
+/* About title - Styles the title with specific font size and weight */
 .about_title {
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
+  font-size: var(--small-font-size); /* Font size from variable */
+  font-weight: var(--font-medium); /* Medium font weight */
 }
+
+/* About subtitle - Styles the subtitle */
 .about_subtitle {
-  font-size: var(tiny-font-size);
+  font-size: var(tiny-font-size); /* Sets font size from variable */
 }
+
+/* About description - Adds padding and bottom margin for the description section */
 .about__description {
-  padding: 0 4rem;
-  margin-bottom: var(--mb-2-5);
+  padding: 0 4rem; /* Adds horizontal padding */
+  margin-bottom: var(--mb-2-5); /* Adds bottom margin */
 }
+
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
+/* For large devices (screen width 992px and below) */
 @media screen and (max-width: 992px) {
   .button_flex {
-    margin: auto;
-    width: 200px;
+    margin: auto; /* Centers the button */
+    width: 200px; /* Sets button width */
   }
   .about__container {
-    grid-template-columns: 1fr;
-    align-items: center;
-    row-gap: 2.5rem;
+    grid-template-columns: 1fr; /* Single column layout */
+    align-items: center; /* Aligns items to the center */
+    row-gap: 2.5rem; /* Space between rows */
   }
   .about_img {
-    width: 220px;
+    width: 220px; /* Reduces image size */
   }
   .about_box {
-    padding: 0.7rem 0.5ren;
+    padding: 0.7rem 0.5rem; /* Reduces padding inside the box */
   }
   .about__date {
-    text-align: center;
+    text-align: center; /* Centers the date text */
   }
   .about_info {
-    justify-content: center;
+    justify-content: center; /* Centers the info content */
   }
   .about__description {
-    padding: 0 5rem;
-    margin-bottom: 2rem;
+    padding: 0 5rem; /* Increases padding for description */
+    margin-bottom: 2rem; /* Reduces margin bottom */
   }
 }
 
-/* For medium devices */
-
+/* For medium devices (screen width 768px and below) */
 @media screen and (max-width: 768px) {
   body {
-    margin: 0 0 var(--header-height) 0;
+    margin: 0 0 var(--header-height) 0; /* Adjusts body margin for header height */
   }
-
   .section {
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 4rem; /* Adds padding to the section */
   }
-
   .section__subtitle {
-    margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-3); /* Sets margin for the subtitle */
   }
 }
 
+/* For small devices (screen width 576px and below) */
 @media screen and (max-width: 576px) {
   .about_info {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
   }
   .about__description {
-    padding: 0;
+    padding: 0; /* Removes padding for description */
   }
 }
 
-/* For small devices */
+/* For extra small devices (screen width 350px and below) */
 @media screen and (max-width: 350px) {
   .about_info {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
   }
   .button_flex {
-    font-size: 10px;
+    font-size: 10px; /* Reduces font size for the button */
   }
 }
+
+/* About1 - Sets the font size for About1 element */
 #About1 {
-  font-size: 35px;
+  font-size: 35px; /* Font size for About1 section */
 }

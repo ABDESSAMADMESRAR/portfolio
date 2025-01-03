@@ -1,64 +1,68 @@
 .footer {
-  background-color: var(--container-color);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
+  background-color: var(--container-color); /* Sets background color for footer using a CSS variable */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Adds a subtle border to the top of the footer */
+  width: 100%; /* Makes the footer take the full width of the screen */
 }
+
 .footer_container {
-  padding: 1rem 0 2rem;
+  padding: 1rem 0 2rem; /* Adds padding around the footer container */
 }
+
 .footer__title,
 .footer_link {
-  color: var(--title-color);
+  color: var(--title-color); /* Sets the text color for title and links using a CSS variable */
 }
-.footer__title {
-  text-align: center;
-  margin-bottom: var(--mb-2);
-}
-.footer_link:hover {
-  color: var(--title-color-dark);
-}
-.footer-list {
-  display: flex;
-  justify-content: center;
-  column-gap: 1.5rem;
-  margin-bottom: var(--mb-2);
-}
-.footer__social {
-  display: flex;
-  justify-content: center;
-  column-gap: 1.25rem;
-}
-.footer__social-link {
-  background-color: var(--title-color);
-  color: var(--container-color);
-  font-size: 1.25rem;
-  padding: 0.4rem;
-  border-radius: 0.5rem;
-  display: inline-flex;
-}
-.footer__social-link:hover {
-  background-color: var(--title-color-dark);
-}
-.footer__copy {
-  display: block;
-  margin-top: 0.9rem;
-  font-weight: 700;
 
-  color: var(--title-color);
-  text-align: center;
-  font-size: var(--smaller-font-size);
+.footer__title {
+  text-align: center; /* Centers the footer title */
+  margin-bottom: var(--mb-2); /* Adds a margin to the bottom of the title */
+}
+
+.footer_link:hover {
+  color: var(--title-color-dark); /* Changes link color on hover */
+}
+
+.footer-list {
+  display: flex; /* Displays footer list as a flex container */
+  justify-content: center; /* Centers the items horizontally */
+  column-gap: 1.5rem; /* Adds a gap between the items */
+  margin-bottom: var(--mb-2); /* Adds bottom margin to the list */
+}
+
+.footer__social {
+  display: flex; /* Displays social links as a flex container */
+  justify-content: center; /* Centers the social icons */
+  column-gap: 1.25rem; /* Adds a gap between the social links */
+}
+
+.footer__social-link {
+  background-color: var(--title-color); /* Sets the background color for social links */
+  color: var(--container-color); /* Sets the text color for social links */
+  font-size: 1.25rem; /* Sets the font size for social links */
+  padding: 0.4rem; /* Adds padding inside the social link */
+  border-radius: 0.5rem; /* Rounds the corners of the social link */
+  display: inline-flex; /* Ensures the social link behaves like an inline element */
+}
+
+.footer__social-link:hover {
+  background-color: var(--title-color-dark); /* Changes background color of the social link on hover */
+}
+
+.footer__copy {
+  display: block; /* Makes the copyright text a block element */
+  margin-top: 0.9rem; /* Adds margin to the top of the copyright text */
+  font-weight: 700; /* Makes the font bold */
+  color: var(--title-color); /* Sets the text color for the copyright */
+  text-align: center; /* Centers the copyright text */
+  font-size: var(--smaller-font-size); /* Sets a smaller font size for the copyright */
 }
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
-
   .footer__social-link {
-    padding: 0.25rem;
-    border-radius: 0.25rem;
-    font-size: 1rem;
+    padding: 0.25rem; /* Reduces the padding inside social links on larger screens */
+    border-radius: 0.25rem; /* Reduces the border radius of social links */
+    font-size: 1rem; /* Reduces the font size of social links */
   }
 }
-
-
-

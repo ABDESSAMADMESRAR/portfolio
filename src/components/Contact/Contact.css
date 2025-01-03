@@ -1,137 +1,166 @@
+/* Contact Container Style */
 .Contact_container {
-  grid-template-columns: repeat(2, max-content);
-  justify-content: center;
-  column-gap: 6rem;
-  padding-bottom: 3rem;
+  grid-template-columns: repeat(2, max-content); /* Creates a 2-column grid layout with max-content for column width */
+  justify-content: center; /* Centers the content within the grid */
+  column-gap: 6rem; /* Sets the gap between columns */
+  padding-bottom: 3rem; /* Adds padding to the bottom */
 }
-.contact_info {
-  display: grid;
-  row-gap: 1rem;
-  grid-template-columns: 300px;
-}
-.contact_form {
-  width: 360px;
-}
-.contact__title {
-  text-align: center;
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-1-5);
-}
-.contact__card {
-  background-color: var(--contianer-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  border-radius: 0.75rem;
-  margin-bottom: 20px;
 
-  text-align: center;
+/* Contact Information Section Style */
+.contact_info {
+  display: grid; /* Uses grid layout */
+  row-gap: 1rem; /* Sets the gap between rows */
+  grid-template-columns: 300px; /* Defines a single column with a fixed width of 300px */
 }
+
+/* Contact Form Section Style */
+.contact_form {
+  width: 360px; /* Sets the width of the form */
+}
+
+/* Contact Title Style */
+.contact__title {
+  text-align: center; /* Centers the title text */
+  font-size: var(--h3-font-size); /* Applies a custom font size variable */
+  font-weight: var(--font-medium); /* Applies a medium font weight */
+  margin-bottom: var(--mb-1-5); /* Adds bottom margin using a custom variable */
+}
+
+/* Contact Card Style */
+.contact__card {
+  background-color: var(--contianer-color); /* Sets the background color of the card */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Adds a light border to the card */
+  padding: 1rem; /* Adds padding inside the card */
+  border-radius: 0.75rem; /* Rounds the corners of the card */
+  margin-bottom: 20px; /* Adds bottom margin to the card */
+  text-align: center; /* Centers the text inside the card */
+}
+
+/* Icon inside the Contact Card */
 .contact__card-icon {
-  font-size: 2rem;
-  color: var(--title-color);
-  margin-bottom: var(--mb-0-25);
+  font-size: 2rem; /* Sets the icon font size */
+  color: var(--title-color); /* Applies custom color for the icon */
+  margin-bottom: var(--mb-0-25); /* Adds margin below the icon */
 }
+
+/* Contact Card Title and Date Style */
 .contact__card-title,
 .contact__card-date {
-  font-size: var(--small-font-size);
+  font-size: var(--small-font-size); /* Sets a smaller font size */
 }
 .contact__card-title {
-  font-weight: var(--font-medium);
+  font-weight: var(--font-medium); /* Applies medium font weight for the title */
 }
 .contact__card-date {
-  display: block;
-  margin-bottom: var(--mb-0-75);
-}
-.contact__button {
-  color: var(--text-color);
-  font-size: var(--small-font-size);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 0.25rem;
-}
-.contact_button-icon {
-  font-size: 1rem;
-  transition: 0.3s;
-}
-.contact__button:hover .contact_button-icon {
-  transform: translateX(0.25rem);
-}
-.contact_form-div {
-  position: relative;
-  margin-bottom: var(--mb-2);
-  height: 4rem;
-}
-.contact_form-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 150%;
-  height: 100%;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  background: none;
-  color: var(--text-color);
-  outline: none;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  z-index: 1;
-}
-.contact_form-tag {
-  position: absolute;
-  top: -0.75rem;
-  left: 1.25rem;
-  font-size: var(--smaller-font-size);
-  padding: 0.25rem;
-  background-color: var(--body-color);
-  z-index: 10;
-}
-.contact_form-are {
-  height: 11rem;
-}
-.contact_form-are textarea {
-  resize: none;
+  display: block; /* Ensures the date is displayed as a block element */
+  margin-bottom: var(--mb-0-75); /* Adds margin below the date */
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For large devices */
+/* Contact Button Style */
+.contact__button {
+  color: var(--text-color); /* Sets the color of the button text */
+  font-size: var(--small-font-size); /* Uses a small font size */
+  display: inline-flex; /* Uses inline-flex for flexible alignment */
+  align-items: center; /* Vertically aligns the button content */
+  justify-content: center; /* Horizontally aligns the button content */
+  column-gap: 0.25rem; /* Adds gap between the icon and text in the button */
+}
+
+/* Button Icon Style */
+.contact_button-icon {
+  font-size: 1rem; /* Sets the icon size */
+  transition: 0.3s; /* Adds a transition effect for hover */
+}
+
+/* Hover Effect for the Button Icon */
+.contact__button:hover .contact_button-icon {
+  transform: translateX(0.25rem); /* Moves the icon to the right on hover */
+}
+
+/* Contact Form Input Field Container */
+.contact_form-div {
+  position: relative; /* Positions the container relative to its parent */
+  margin-bottom: var(--mb-2); /* Adds bottom margin */
+  height: 4rem; /* Sets a fixed height for the container */
+}
+
+/* Contact Form Input Style */
+.contact_form-input {
+  position: absolute; /* Positions the input absolutely within its container */
+  top: 0; /* Aligns the input to the top */
+  left: 0; /* Aligns the input to the left */
+  width: 150%; /* Makes the input 150% of the container width */
+  height: 100%; /* Fills the height of the container */
+  border: 2px solid rgba(0, 0, 0, 0.3); /* Adds a light border */
+  background: none; /* Removes the background */
+  color: var(--text-color); /* Sets the text color */
+  outline: none; /* Removes outline on focus */
+  border-radius: 0.75rem; /* Rounds the corners */
+  padding: 1.5rem; /* Adds padding inside the input */
+  z-index: 1; /* Sets the stacking order */
+}
+
+/* Tag Above the Input Field */
+.contact_form-tag {
+  position: absolute; /* Positions the tag absolutely */
+  top: -0.75rem; /* Moves the tag above the input */
+  left: 1.25rem; /* Positions the tag horizontally */
+  font-size: var(--smaller-font-size); /* Applies a smaller font size */
+  padding: 0.25rem; /* Adds padding around the tag */
+  background-color: var(--body-color); /* Sets the background color of the tag */
+  z-index: 10; /* Ensures the tag is on top */
+}
+
+/* Contact Form Text Area Style */
+.contact_form-are {
+  height: 11rem; /* Sets the height of the text area */
+}
+
+/* Text Area Style */
+.contact_form-are textarea {
+  resize: none; /* Disables resizing of the text area */
+}
+
+/*============================= BREAKPOINTS =============================*/
+/* For large devices (max-width: 992px) */
 @media screen and (max-width: 992px) {
-  #Contact{
-    margin-right: var(--mb-2-5);
-    margin-left: var(--mb-2-5);
+  #Contact {
+    margin-right: var(--mb-2-5); /* Adds margin to the right */
+    margin-left: var(--mb-2-5); /* Adds margin to the left */
   }
   .Contact_container {
-    column-gap: 3rem;
+    column-gap: 3rem; /* Adjusts column gap */
   }
 }
 
-/* For medium devices */
+/* For medium devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
   .Contact_container {
-    grid-template-columns: 1fr;
-    row-gap: 3rem;
+    grid-template-columns: 1fr; /* Changes to a single-column layout */
+    row-gap: 3rem; /* Increases row gap */
   }
   .contact_info {
-    justify-content: center;
+    justify-content: center; /* Centers the contact info */
   }
 
   .contact__form {
-    margin: 0 auto;
+    margin: 0 auto; /* Centers the form */
   }
 }
 
+/* For small devices (max-width: 576px) */
 @media screen and (max-width: 576px) {
   .contact_info {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Ensures a single column layout */
   }
 
   .contact_form {
-    width: 100%;
+    width: 100%; /* Sets form width to 100% */
   }
 
   .contact_form-input {
-    width: 90%;
+    width: 90%; /* Adjusts the input field width */
   }
 }
 
-/* For small devices */
+/* For very small devices */

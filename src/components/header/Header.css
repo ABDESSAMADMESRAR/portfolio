@@ -1,120 +1,136 @@
+/* General header styles */
 .header {
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--body-color);
+  width: 100%; /* Full width of the screen */
+  top: 0; /* Aligns to the top */
+  left: 0; /* Aligns to the left */
+  background-color: var(--body-color); /* Sets background color from the root variable */
 }
+
+/* Navigation bar styles */
 .nav {
-  height: calc(var(--header-height)+1.5rem);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  column-gap: 1rem;
-}
-.nav_logo ,
-.nav__toggle
-{
-  color: var(--title-color);
-  font-weight: var(--font-medium);
+  height: calc(var(--header-height) + 1.5rem); /* Sets dynamic height based on header height variable */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Distributes items with space between */
+  align-items: center; /* Centers items vertically */
+  column-gap: 1rem; /* Adds space between columns */
 }
 
+/* Logo and toggle button styles */
+.nav_logo, .nav__toggle {
+  color: var(--title-color); /* Sets color from the title color variable */
+  font-weight: var(--font-medium); /* Uses medium font weight from the root variable */
+}
+
+/* Navigation list (links) styles */
 .nav_list {
-  display: flex;
-  column-gap: 2rem;
+  display: flex; /* Flexbox layout */
+  column-gap: 2rem; /* Adds space between navigation links */
 }
 
-.ri-close-large-line,
-.nav__toggle
-{
-  display: none;
+/* Hides the close button and toggle button */
+.ri-close-large-line, .nav__toggle {
+  display: none; /* Hides these elements by default */
 }
+
+/* Contact section styles */
 .Contact {
-display: none !important;
+  display: none !important; /* Ensures contact section is hidden by default */
 }
 
+/* Icon styles */
 .uil {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: var(--small-font-size);
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-  cursor: pointer;
-  transition: 0.3s;
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Aligns icons in a column */
+  align-items: center; /* Centers icons horizontally */
+  font-size: var(--small-font-size); /* Small font size from root variable */
+  color: var(--title-color); /* Sets color from title color variable */
+  font-weight: var(--font-medium); /* Sets font weight */
+  cursor: pointer; /* Changes cursor to pointer when hovered */
+  transition: 0.3s; /* Adds smooth transition */
 }
-.active-link,
-.nav_link:hover {
-  color: var(--title-color-dark);
-}
-/* For medium devices */
 
+/* Active link and hover effects */
+.active-link, .nav_link:hover {
+  color: var(--title-color-dark); /* Changes color on hover or when active */
+}
+
+/* ====================== MEDIA QUERIES ===================== */
+
+/* For medium devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
 
   .header {
-    top: inherit;
-    bottom: 0;
+    top: inherit; /* Removes top alignment */
+    bottom: 0; /* Aligns to the bottom for mobile */
   }
+
   .nav {
-    height: var(--header-height);
+    height: var(--header-height); /* Sets header height */
   }
+
   .nav_Meun {
-    position: fixed;
-    bottom: -100%;
+    position: fixed; /* Fixes the menu at the bottom */
+    bottom: -100%; /* Initially hidden off the screen */
     left: 0;
     width: 100%;
-    background-color: var(--container-color);
-    padding: 2rem 1.5rem 4rem;
-    box-shadow: 0 -1px 4px rgb(0, 0, 0, 0.15);
-    border-radius: 1.5rem 1.5rem 0 0;
-    transition: 0.3s;
+    background-color: var(--container-color); /* Background color from container variable */
+    padding: 2rem 1.5rem 4rem; /* Padding for the menu */
+    box-shadow: 0 -1px 4px rgb(0, 0, 0, 0.15); /* Adds shadow to the menu */
+    border-radius: 1.5rem 1.5rem 0 0; /* Rounds the top corners */
+    transition: 0.3s; /* Smooth transition */
   }
-  /* show Meun */
-  .show-meun {
-    bottom: 0;
-  }
-  
-  .ri-close-large-line{
-    position: absolute;
-    right: 1.3rem;
-    bottom: 0.5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--title-color);
-  }
-  .ri-close-large-line:hover {
-    color: var(--title-color-dark);
-  }
-  .Contact{
-    font-size: 1.2rem;
-  }
-  .nav_list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-  .Contact{
-    display: block !important;
-  }
-  .ri-close-large-line,
-  .nav__toggle {
-    display: block ;
-  }
-  .nav__toggle{
-    margin-right: 30px ;
-    font-size: 20px;
-  }
-.nav_logo{
-  margin-left: 30px ;
-}
-  
 
+  /* Shows the menu */
+  .show-meun {
+    bottom: 0; /* Positions the menu at the bottom of the screen */
+  }
+
+  /* Close button styles */
+  .ri-close-large-line {
+    position: absolute; /* Positions close button */
+    right: 1.3rem; /* Aligns to the right */
+    bottom: 0.5rem; /* Aligns to the bottom */
+    font-size: 1.5rem; /* Font size for the close button */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: var(--title-color); /* Sets color for close button */
+  }
+
+  /* Hover effect for close button */
+  .ri-close-large-line:hover {
+    color: var(--title-color-dark); /* Changes color on hover */
+  }
+
+  /* Contact section on mobile */
+  .Contact {
+    font-size: 1.2rem; /* Increases font size */
+    display: block !important; /* Displays the contact section on mobile */
+  }
+
+  .nav_list {
+    display: grid; /* Uses grid layout for mobile */
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 2rem; /* Adds gap between items */
+  }
+
+  /* Display toggle button on mobile */
+  .ri-close-large-line, .nav__toggle {
+    display: block; /* Makes toggle and close buttons visible */
+  }
+
+  .nav__toggle {
+    margin-right: 30px; /* Adds margin on the right */
+    font-size: 20px; /* Sets font size for toggle button */
+  }
+
+  .nav_logo {
+    margin-left: 30px; /* Adds margin on the left for logo */
+  }
 }
-/* For small devices */
+
+/* For small devices (max-width: 350px) */
 @media screen and (max-width: 350px) {
   
-  .nav__toggle{
-    margin-right: 20px !important;
+  .nav__toggle {
+    margin-right: 20px !important; /* Adjusts margin for small devices */
   }
-
 }

@@ -1,54 +1,57 @@
-
-.scrollup{
-  position: fixed;
-  right: 2.5rem;
-  bottom: -20%;
-  z-index: var(--z-tooltip);
-  transition: .4s;
-
-  border-radius: 50%;
-  background-color: var(--title-color);
-opacity: 0.8;
-padding: 0.3rem 0.5rem;
-
-}
-.scrollup-icon{
-  font-size: 1.5rem;
-  color: var(--container-color);
-
+/* ScrollUp Button Styles */
+.scrollup {
+  position: fixed; /* Fix the position of the scroll-up button */
+  right: 2.5rem; /* Position the button 2.5rem from the right side of the screen */
+  bottom: -20%; /* Initially hide the button below the screen */
+  z-index: var(--z-tooltip); /* Set the z-index to ensure the button appears above other elements */
+  transition: .4s; /* Smooth transition for animations */
+  border-radius: 50%; /* Make the button circular */
+  background-color: var(--title-color); /* Set the background color of the button */
+  opacity: 0.8; /* Set opacity for a semi-transparent effect */
+  padding: 0.3rem 0.5rem; /* Set padding for the button */
 }
 
-.scrollup:hover{
-  background-color: var(title-color-dark);
+/* Icon inside the ScrollUp button */
+.scrollup-icon {
+  font-size: 1.5rem; /* Set the size of the icon */
+  color: var(--container-color); /* Set the color of the icon */
 }
 
-
-.show-up{
-  bottom: 3rem;
+/* Hover effect for the scroll-up button */
+.scrollup:hover {
+  background-color: var(--title-color-dark); /* Change the background color on hover */
 }
+
+/* Show the ScrollUp button when user scrolls up */
+.show-up {
+  bottom: 3rem; /* Move the button to 3rem from the bottom when it's visible */
+}
+
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
+
+/* For large devices (screens with max width of 992px) */
 @media screen and (max-width: 992px) {
-  .scrollup{
-    right: 1.5rem;
-    padding:0.25rem 0.4rem ;
+  .scrollup {
+    right: 1.5rem; /* Adjust position on the right for larger screens */
+    padding: 0.25rem 0.4rem; /* Adjust padding for better visibility */
   }
 }
 
-/* For medium devices */
+/* For medium devices (screens with max width of 768px) */
 @media screen and (max-width: 768px) {
-  .show-up{
-    bottom: 4rem;
+  .show-up {
+    bottom: 4rem; /* Increase the bottom position to give more space on medium devices */
   }
 }
 
+/* For smaller devices (screens with max width of 576px) */
 @media screen and (max-width: 576px) {
-  .show-up{
-    right: 1rem;
+  .show-up {
+    right: 1rem; /* Adjust the right position for small screens */
   }
 }
 
-/* For small devices */
+/* For very small devices (screens with max width of 350px) */
 @media screen and (max-width: 350px) {
-
+  /* No specific adjustments here for small screens, but can add if necessary */
 }

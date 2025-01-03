@@ -1,24 +1,76 @@
+/* App.css */
+
+/* Styling for the loading screen */
+.loading-screen {
+  display: flex; /* Using flexbox for centering content */
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f5f5f5; /* Light grey background color */
+  position: fixed; /* Fixed position on the screen */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  width: 100%; /* Full width of the viewport */
+  z-index: 1000; /* Ensures it stays above other elements */
+  flex-direction: column; /* Stack the content vertically */
+}
+
+/* Spinner styling (a rotating circle to show loading) */
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey border */
+  border-top: 8px solid #3498db; /* Blue top border to make the spinner colorful */
+  border-radius: 50%; /* Make the shape circular */
+  width: 70px; /* Set spinner width */
+  height: 50px; /* Set spinner height */
+  animation: spin 2s linear infinite; /* Apply the spin animation infinitely */
+}
+
+/* Animation for the spinning effect */
+@keyframes spin {
+  0% { transform: rotate(0deg); } /* Start from 0 degrees */
+  100% { transform: rotate(360deg); } /* End at 360 degrees (one full rotation) */
+}
+
+/* Styling for the text message shown during loading */
+.loading-screen p {
+  margin-top: 20px; /* Space above the text */
+  font-size: 2rem; /* Larger text size */
+  color: #333; /* Dark text color */
+  font-weight: bold; /* Make the text bold */
+  letter-spacing: 2px; /* Increase letter spacing */
+  text-align: center; /* Center-align the text */
+}
+
+/* Typing effect animation (for text typing animation) */
+@keyframes typing {
+  from {
+    width: 0; /* Start with no visible text */
+  }
+  to {
+    width: 40em; /* Expand to display full text */
+  }
+}
+
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); /* Import Poppins font */
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3rem;
-
+  --header-height: 3rem; /* Height for the header */
+  
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  --hue: 0; /* Base hue for color */
+  --sat: 0%; /* Saturation for color */
+  --title-color: hsl(var(--hue), var(--sat), 20%); /* Title color using HSL */
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%); /* Dark title color */
+  --text-color: hsl(var(--hue), var(--sat), 46%); /* Text color */
+  --body-color: hsl(var(--hue), var(--sat), 98%); /* Body background color */
+  --container-color: #fff; /* Default white color for containers */
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
-
-  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif; /* Font for the body */
+  
+  /* Font sizes */
   --big-font-size: 3.5rem;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
@@ -28,13 +80,12 @@
   --smaller-font-size: 0.813rem;
   --tiny-font-size: 0.625rem;
 
-  /*========== Font weight ==========*/
+  /* Font weight */
   --font-normal: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /*========== Margenes Bottom ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+  /* Bottom margin variables for consistent spacing */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -44,13 +95,13 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /*========== z index ==========*/
+  /* z-index variables for stacking */
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
 
-/* Responsive typography */
+/* Responsive typography (for smaller screen sizes) */
 @media screen and (max-width: 992px) {
   :root {
     --big-font-size: 2.75rem;
@@ -65,147 +116,136 @@
 
 /*=============== BASE ===============*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
 }
 
 body,
 button,
 input,
 textarea {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+  font-family: var(--body-font); /* Apply the body font to text elements */
+  font-size: var(--normal-font-size); /* Set default font size */
 }
 
 body {
-  background-color: var(--body-color);
-  color: var(--text-color);
+  background-color: var(--body-color); /* Set background color for the body */
+  color: var(--text-color); /* Set text color for the body */
 }
 
 h1,
 h2,
 h3 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  color: var(--title-color); /* Set title color */
+  font-weight: var(--font-semi-bold); /* Make title font semi-bold */
 }
 
 ul {
-  list-style: none;
+  list-style: none; /* Remove list bullet points */
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* Remove default underline for links */
 }
 
 button {
-  cursor: pointer;
-  border: none;
-  outline: none;
+  cursor: pointer; /* Change cursor to pointer on button hover */
+  border: none; /* Remove default button border */
+  outline: none; /* Remove default focus outline */
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Make images responsive */
+  height: auto; /* Maintain image aspect ratio */
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
-  padding: 6rem 0 2rem;
+  padding: 6rem 0 2rem; /* Add padding to sections */
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
+  font-size: var(--h1-font-size); /* Title font size */
+  color: var(--title-color); /* Title color */
 }
 
 .section__subtitle {
   display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: 4rem;
+  font-size: var(--small-font-size); /* Subtitle font size */
+  margin-bottom: 4rem; /* Space below subtitle */
 }
 
 .section__title,
 .section__subtitle {
-  text-align: center;
+  text-align: center; /* Center align title and subtitle */
 }
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 968px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 968px; /* Set max width for container */
+  margin-left: auto; /* Center container horizontally */
+  margin-right: auto; /* Center container horizontally */
 }
 
 .grid {
-  display: grid;
-  gap: 1.5rem;
+  display: grid; /* Use CSS Grid layout */
+  gap: 1.5rem; /* Space between grid items */
 }
 
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
-  padding: 1.25rem 2rem;
-  border-radius: 1rem;
-  font-weight: var(--font-medium);
+  background-color: var(--title-color); /* Set button background */
+  color: var(--container-color); /* Set button text color */
+  padding: 1.25rem 2rem; /* Add padding to button */
+  border-radius: 1rem; /* Round button corners */
+  font-weight: var(--font-medium); /* Set button text weight */
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--title-color-dark); /* Change background on hover */
 }
 
 .button__icon {
-  margin-left: var(--mb-0-5);
+  margin-left: var(--mb-0-5); /* Add margin to the left of the icon */
 }
 
 .button--flex {
   display: inline-flex;
-  align-items: center;
+  align-items: center; /* Align button icon and text */
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For large devices */
 @media screen and (max-width: 992px) {
-
   .button {
-    padding: 1rem 1.75rem;
+    padding: 1rem 1.75rem; /* Adjust padding for smaller screens */
   }
 
   .button__icon {
-    width: 22px;
-    height: 22px;
+    width: 22px; /* Resize button icon */
+    height: 22px; /* Resize button icon */
   }
 }
 
-/* For medium devices */
 @media screen and (max-width: 768px) {
-
-
   .section {
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 4rem; /* Adjust section padding */
   }
 
   .section__subtitle {
-    margin-bottom: var(--mb-3);
+    margin-bottom: var(--mb-3); /* Adjust margin below subtitle */
   }
 }
 
-@media screen and (max-width: 576px) {
-}
+@media screen and (max-width: 576px) {}
 
-/* For small devices */
 @media screen and (max-width: 350px) {
   :root {
-    --big-font-size: 2.25rem;
+    --big-font-size: 2.25rem; /* Adjust font size for very small devices */
   }
-
-
 }
-
-

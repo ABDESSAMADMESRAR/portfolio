@@ -1,35 +1,34 @@
-import React from 'react'
-import { useEffect } from 'react'
-import ScrollReveal from 'scrollreveal'
+import React from 'react'  // Importing React to build the component
+import { useEffect } from 'react'  // Importing the useEffect hook from React to handle side effects
+import ScrollReveal from 'scrollreveal'  // Importing the ScrollReveal library to create scroll animations
 
-function WorkItmes({item}) {
-  useEffect(() => {
-    let sr = ScrollReveal({
-      origin: "top",
-      distance: "60px",
-      duration: 1000,
-      delay: 400,
+function WorkItmes({item}) {  // Defining the functional component 'WorkItmes' that accepts a prop 'item'
+  useEffect(() => {  // The useEffect hook will run once when the component mounts
+    let sr = ScrollReveal({  // Initializing ScrollReveal with configuration for animation
+      origin: "top",  // The animation will start from the top of the page
+      distance: "60px",  // The content will move 60px during the animation
+      duration: 1000,  // The animation will last for 1000ms (1 second)
+      delay: 400,  // The animation will start after a 400ms delay
     });
 
-    sr.reveal(`.work--cards `, {
-    
-      origin: "left",
-      interval:100
+    sr.reveal(`.work--cards `, {  // Revealing elements with the class '.work--cards'
+      origin: "left",  // The animation will come from the left side
+      interval:100  // The elements will animate with a 100ms interval between them
     });
 
-  
-  }, []);
-  return (
+  }, []);  // Empty dependency array ensures that this effect runs only once when the component mounts
+
+  return (  // JSX syntax to render the component
     <>
-<div className="work--cards" key={item.id}>
-<img src={item.image} className='work--img'></img>
-<h3  className='work--title' id='work--title'>{item.title}</h3>
-<a href={item.link}  target="_blank" className='work--button'>
-  <i class="ri-arrow-right-circle-fill   work--button-icon ">  <b style={{  cursor: 'pointer'}}>Demo </b></i>
-</a>
-</div>
+    <div className="work--cards" key={item.id}>  // A container for each work item, with a unique key based on 'item.id'
+      <img src={item.image} className='work--img'></img>  // Displaying the image for the work item
+      <h3 className='work--title' id='work--title'>{item.title}</h3>  // Displaying the title of the work item
+      <a href={item.link} target="_blank" className='work--button'>  // Link to the demo page, opening in a new tab
+        <i class="ri-arrow-right-circle-fill   work--button-icon ">  <b style={{ cursor: 'pointer'}}>Demo </b></i>  // Icon for the button with a "Demo" label
+      </a>
+    </div>
     </>
   )
 }
 
-export default WorkItmes
+export default WorkItmes  // Exporting the 'WorkItmes' component to be used in other parts of the app

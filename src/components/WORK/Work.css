@@ -1,121 +1,134 @@
+/* Portfolio Section Styling */
 #Portfolio {
-  font-size: 35px;
+  font-size: 35px; /* Set font size for the Portfolio section */
 }
-.works_filters{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 0.75rem;
-  margin-bottom: var(--mb-2);
-}
-.work-item{
-  color: var(--title-color);
-  padding: 0.25rem 0.75rem;
-  font-weight: var(--font-medium);
 
-  border-radius: 0.1rem;
-  text-transform: capitalize;
-  cursor: pointer;
+/* Filters section for works - layout and alignment */
+.works_filters {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  column-gap: 0.75rem; /* Space between filter items */
+  margin-bottom: var(--mb-2); /* Bottom margin using a CSS variable */
 }
-.work-item:hover{
-  background-color: var(--title-color);
-  color: var(--container-color);
-  border-radius: 1rem;
+
+/* Individual work item - styling for clickable elements */
+.work-item {
+  color: var(--title-color); /* Text color based on title color variable */
+  padding: 0.25rem 0.75rem; /* Padding inside the item */
+  font-weight: var(--font-medium); /* Font weight from a CSS variable */
+  border-radius: 0.1rem; /* Slight border radius for rounded corners */
+  text-transform: capitalize; /* Capitalize text */
+  cursor: pointer; /* Pointer cursor on hover */
 }
+
+/* Hover effect for work item */
+.work-item:hover {
+  background-color: var(--title-color); /* Change background on hover */
+  color: var(--container-color); /* Change text color on hover */
+  border-radius: 1rem; /* Increase border radius on hover */
+}
+
+/* Container for works - grid layout */
 .work--container {
-  grid-template-columns: repeat(2, max-content);
-  gap: 3rem;
-  justify-content: center;
+  grid-template-columns: repeat(2, max-content); /* Two columns of max-content width */
+  gap: 3rem; /* Gap between grid items */
+  justify-content: center; /* Center grid items horizontally */
 }
+
+/* Work image styling */
 .work--img {
-  width: 295px;
-  border-radius: 1rem;
-  margin-bottom: var(--mb-1);
+  width: 295px; /* Set width of images */
+  border-radius: 1rem; /* Rounded corners */
+  margin-bottom: var(--mb-1); /* Bottom margin using a CSS variable */
 }
+
+/* Work card styling - container for work content */
 .work--cards {
-  background-color: var(--container-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  border-radius: 1rem;
+  background-color: var(--container-color); /* Background color from container color variable */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Border with slight transparency */
+  padding: 1.5rem; /* Padding inside the card */
+  border-radius: 1rem; /* Rounded corners */
 }
+
+/* Title within work cards */
 .work--title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: var(--mb-0-5);
+  font-size: var(--normal-font-size); /* Font size from CSS variable */
+  font-weight: var(--font-medium); /* Medium font weight */
+  margin-bottom: var(--mb-0-5); /* Bottom margin */
 }
+
+/* Button styling within work cards */
 .work--button {
-  color: var(--text-color);
-  font-size: var(--small-font-size);
-  display: flex;
-  align-items: center;
-  column-gap: 0.25rem;
-
+  color: var(--text-color); /* Button text color */
+  font-size: var(--small-font-size); /* Font size from CSS variable */
+  display: flex; /* Flex layout for button */
+  align-items: center; /* Vertically align items */
+  column-gap: 0.25rem; /* Space between icon and text */
 }
+
+/* Icon inside the button */
 .work--button-icon {
-font-size: 1rem;
-transition: 0.4s;
-
+  font-size: 1rem; /* Icon size */
+  transition: 0.4s; /* Smooth transition for hover effect */
 }
+
+/* Hover effect for button icon */
 .work--button:hover .work--button-icon {
-  transform: translateX(0.25rem);
-}
-.active-Work{
-  background-color: var(--title-color);
-  color: var(--container-color);
-  border-radius: 1rem;
+  transform: translateX(0.25rem); /* Move icon to the right on hover */
 }
 
+/* Active work item style */
+.active-Work {
+  background-color: var(--title-color); /* Active background color */
+  color: var(--container-color); /* Active text color */
+  border-radius: 1rem; /* Rounded corners */
+}
 
-/*=============== BREAKPOINTS ===============*/
-/* For large devices */
+/* Breakpoints for responsive design */
+
+/* For large devices (max-width: 992px) */
 @media screen and (max-width: 992px) {
   .work--container {
-
-    gap: 1.25rem;
-    
+    gap: 1.25rem; /* Adjust gap between grid items */
   }
   .work--cards {
-padding: 1rem;
+    padding: 1rem; /* Adjust padding inside work cards */
   }
-  .work--title{
-  margin-bottom: 0.25rem;
+  .work--title {
+    margin-bottom: 0.25rem; /* Adjust margin for work title */
   }
 }
 
-/* For medium devices */
+/* For medium devices (max-width: 768px) */
 @media screen and (max-width: 768px) {
   .work--container {
-
-grid-template-columns: max-content;
-    
+    grid-template-columns: max-content; /* Switch to single column layout */
   }
   .skills_content {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Adjust padding for skills section */
   }
   .work--img {
-margin-bottom: 0.75rem;
-
+    margin-bottom: 0.75rem; /* Adjust margin for images */
   }
 }
 
+/* For smaller devices (max-width: 576px) */
 @media screen and (max-width: 576px) {
   .work--container {
-
-    grid-template-columns: 1fr;
-        
-      }
-      .work--img {
-      width: 100%;
-        
-          }
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+  .work--img {
+    width: 100%; /* Make images take full width */
+  }
 }
 
-/* For small devices */
+/* For very small devices (max-width: 350px) */
 @media screen and (max-width: 350px) {
-  .work-item{
-    font-size: var(--small-font-size);
+  .work-item {
+    font-size: var(--small-font-size); /* Reduce font size for smaller devices */
   }
-  .works_filters{
-    column-gap: 0.25rem;
+  .works_filters {
+    column-gap: 0.25rem; /* Reduce space between filter items */
   }
 }

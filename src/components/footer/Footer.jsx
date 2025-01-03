@@ -1,42 +1,42 @@
-import React from 'react'
-import "./Footer.css"
+import React from 'react'; // Importing React library
+import "./Footer.css"; // Importing the CSS file for styling
+
 function Footer() {
   return (
-    <div>  <footer className='footer'>
-    <div className="container footer_container">
-      <h1 className='footer__title'>MESRAR</h1>
-      <ul className='footer-list '>
-        <li className=''>
-          <a href="#about" className='footer_link'>About</a>
-        </li>
-        <li className=''>
-          <a href="#Projects" className='footer_link'>Projects</a>
-        </li>
-        <li className=''>
-          <a href="#Services" className='footer_link'>Services</a>
-        </li>
-      </ul>
-      <div className='footer__social'>
-      <a href="https://twitter.com/ABDESSAMAD51194" className='footer__social-link' target='_blank'>
-<i class="ri-twitter-x-fill"></i>
-</a>
-<a href="https://www.instagram.com/abdessamad.mesrar__02/" className='footer__social-link' target='_blank'>
-<i class="ri-instagram-line"></i>
-</a>
-
-<a href="https://www.linkedin.com/in/abdessamad-mesrar/" className='footer__social-link' target='_blank'>
-<i class="ri-linkedin-box-fill"></i>
-</a>
-<a href="https://github.com/ABDESSAMADMESRAR" className='footer__social-link' target='_blank'>
-<i class="ri-github-fill"></i>
-</a>
-      </div>
-      <span className='footer__copy'>&#169; All rights reserved to Masrar</span>
+    <div>
+      <footer className='footer'> {/* Footer container */}
+        <div className="container footer_container"> {/* Main container of the footer */}
+          <h1 className='footer__title'>MESRAR</h1> {/* Footer title */}
+          <ul className='footer-list'> {/* List of navigation links */}
+            <li>
+              <a href="#about" className='footer_link'>About</a> {/* About section link */}
+            </li>
+            <li>
+              <a href="#Projects" className='footer_link'>Projects</a> {/* Projects section link */}
+            </li>
+            <li>
+              <a href="#Services" className='footer_link'>Services</a> {/* Services section link */}
+            </li>
+          </ul>
+          <div className='footer__social'> {/* Social media icons */}
+            <a href="https://twitter.com/ABDESSAMAD51194" className='footer__social-link' target='_blank'>
+              <i className="ri-twitter-x-fill"></i> {/* Twitter icon */}
+            </a>
+            <a href="https://www.instagram.com/abdessamad.mesrar__02/" className='footer__social-link' target='_blank'>
+              <i className="ri-instagram-line"></i> {/* Instagram icon */}
+            </a>
+            <a href="https://www.linkedin.com/in/abdessamad-mesrar/" className='footer__social-link' target='_blank'>
+              <i className="ri-linkedin-box-fill"></i> {/* LinkedIn icon */}
+            </a>
+            <a href="https://github.com/ABDESSAMADMESRAR" className='footer__social-link' target='_blank'>
+              <i className="ri-github-fill"></i> {/* GitHub icon */}
+            </a>
+          </div>
+          <span className='footer__copy'>&#169; All rights reserved to Masrar</span> {/* Copyright text */}
+        </div>
+      </footer>
     </div>
-  </footer>
-
-    </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer; // Exporting the Footer component
