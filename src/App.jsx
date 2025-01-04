@@ -13,14 +13,14 @@ import Scrollup from './components/scrollup/Scrollup'; // Importing Scrollup com
 function App() {
   const [loading, setLoading] = useState(true); // State to manage loading state
   const [text, setText] = useState(""); // State to store the text to be displayed character by character
-  const name = "MESRAR"; // The text to be displayed (used for the loading animation)
+  const name = `A-MESRAR`; // The text to be displayed (used for the loading animation)
 
   // Simulating the typing effect for the loading screen
   useEffect(() => {
     // Simulating a delay for the page loading
     const timer = setTimeout(() => {
       setLoading(false); // Set loading to false after 3 seconds (page loaded)
-    }, 3000); // 3 seconds delay
+    }, 4000); // 3 seconds delay
 
     let i = 0;
     const textTimer = setInterval(() => {
