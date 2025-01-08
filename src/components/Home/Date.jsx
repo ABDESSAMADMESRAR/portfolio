@@ -52,7 +52,7 @@ function Date() {
 
       {/* Description text */}
       <p className="home__description">
-        I am a front-end developer and UX/UI designer based in Safi , Morocco
+        I am a front-end developer | UX/UI designer | graphic designer| Video Editor based in Safi , Morocco
         and I am very passionate and dedicated to my work.
       </p>
     

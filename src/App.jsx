@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react'; // Importing necessary React hooks
+import React, { useState, useEffect, lazy, Suspense } from 'react'; // Importing necessary React hooks and functions
 import './App.css'; // Importing the stylesheet for the App
-import Header from './components/header/Header'; // Importing Header component
-import Home from './components/Home/Home'; // Importing Home component
-import About from './components/about/About'; // Importing About component
-import Skills from './components/Skills/Skills'; // Importing Skills component
-import Services from './components/services/Services'; // Importing Services component
-import Work from './components/WORK/Work'; // Importing Work component
-import Contact from './components/Contact/Contact'; // Importing Contact component
-import Footer from './components/footer/Footer'; // Importing Footer component
-import Scrollup from './components/scrollup/Scrollup'; // Importing Scrollup component
+
+// Lazy loading the components
+const Header = lazy(() => import('./components/header/Header'));
+const Home = lazy(() => import('./components/Home/Home'));
+const About = lazy(() => import('./components/about/About'));
+const Skills = lazy(() => import('./components/Skills/Skills'));
+const Services = lazy(() => import('./components/services/Services'));
+const Work = lazy(() => import('./components/WORK/Work'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
+const Footer = lazy(() => import('./components/footer/Footer'));
+const Scrollup = lazy(() => import('./components/scrollup/Scrollup'));
 
 function App() {
   const [loading, setLoading] = useState(true); // State to manage loading state
@@ -17,10 +19,9 @@ function App() {
 
   // Simulating the typing effect for the loading screen
   useEffect(() => {
-    // Simulating a delay for the page loading
     const timer = setTimeout(() => {
-      setLoading(false); // Set loading to false after 3 seconds (page loaded)
-    }, 4000); // 3 seconds delay
+      setLoading(false); // Set loading to false after 4 seconds (page loaded)
+    }, 4000);
 
     let i = 0;
     const textTimer = setInterval(() => {
@@ -30,13 +31,13 @@ function App() {
       } else {
         clearInterval(textTimer); // Stop adding characters after the name is fully displayed
       }
-    }, 500); // Delay of 500ms between each character
+    }, 500);
 
     return () => {
-      clearTimeout(timer); // Cleanup the timer when the component unmounts
-      clearInterval(textTimer); // Cleanup the text typing interval when the component unmounts
+      clearTimeout(timer);
+      clearInterval(textTimer);
     };
-  }, []); // Empty dependency array means this effect runs only once when the component is mounted
+  }, []);
 
   // If the page is still loading, show the loading screen
   if (loading) {
@@ -50,7 +51,7 @@ function App() {
 
   // Once loading is complete, render the rest of the components
   return (
-    <>
+    <Suspense fallback={<div className="loading-screen">Loading...</div>}>
       <Header /> {/* Render the Header component */}
       <main className="main"> {/* Main content section */}
         <Home /> {/* Render the Home component */}
@@ -64,8 +65,8 @@ function App() {
       </main>
       <Footer /> {/* Render the Footer component */}
       <Scrollup /> {/* Render the Scrollup component */}
-    </>
+    </Suspense>
   );
 }
 
-export default App; // Export the App component to be used in other parts of the application
+export default App; // Export the App component
