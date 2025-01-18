@@ -22,6 +22,7 @@ import  Work17 from '../../assets/wiseinvest.png'
 import Work18 from '../../assets/procosaf.png'
 import Work19 from '../../assets/website agsadtours.png'
 import Work20 from '../../assets/RGUIMAR QUESADA.png'
+import Work21 from '../../assets/TravelApp-UiUX-design.png'
 
 export const projectsData = [
   {
@@ -205,6 +206,14 @@ export const projectsData = [
   image: Work03,
   title: "Football en salle",
   link:"https://www.behance.net/gallery/211752831/Football-en-salle",
+
+  category: "Design",
+},
+{
+  id: 24,
+  image: Work21,
+  title: "TravelApp-UiUX-design",
+  link:"https://www.behance.net/gallery/217073411/TravelApp-UiUX-design",
 
   category: "Design",
 },
