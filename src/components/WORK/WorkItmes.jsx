@@ -20,13 +20,16 @@ function WorkItmes({item}) {  // Defining the functional component 'WorkItmes' t
 
   return (  // JSX syntax to render the component
     <>
+      <a href={item.link} target="_blank" className='work--button'> 
+
     <div className="work--cards" key={item.id}> 
       <img src={item.image} className='work--img'></img>  
-      <h3 className='work--title' id='work--title'>{item.title}</h3>  
-      <a href={item.link} target="_blank" className='work--button'> 
+      <h3 className='work--title' id='work--title'>{item.title}</h3> 
+ 
         <i class="ri-arrow-right-circle-fill   work--button-icon ">  <b style={{ cursor: 'pointer'}}>Demo </b></i>  
-      </a>
     </div>
+    </a>
+
     </>
   )
 }

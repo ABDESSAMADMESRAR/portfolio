@@ -20,7 +20,6 @@ import Work15 from '../../assets/ecommerec-website.png'
 import Work16 from '../../assets/marokkoleisten.png'
 import  Work17 from '../../assets/wiseinvest.png'
 import Work18 from '../../assets/procosaf.png'
-import Work19 from '../../assets/website agsadtours.png'
 import Work20 from '../../assets/RGUIMAR QUESADA.png'
 import Work21 from '../../assets/TravelApp-UiUX-design.png'
 
@@ -33,15 +32,7 @@ export const projectsData = [
     category: "Web",
 
   },
-  {
-    id: 2,
-    image: Work19,
-    title: " agsadtours",
-    link:"https://agsadtours.com/fr/",
 
-    category: "Web",
-
-  },
   {
     id: 3,
     image: Work18,
