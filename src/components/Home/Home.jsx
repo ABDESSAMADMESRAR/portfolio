@@ -4,7 +4,7 @@ import Socile from "../Home/Socile"; // Importing the Socile component (most lik
 import Date from "../Home/Date"; // Importing the Date component (most likely for displaying a date)
 import ScrollReveal from "scrollreveal"; // Importing the ScrollReveal library for animations when elements are scrolled into view
 import { useEffect } from "react"; // Importing the useEffect hook to run side effects in function components
-import abdessmad from '../../images/ABDESSAMAD .png' // Importing an image to be displayed in the Home component
+import abdessmad from '../../images/ABDESSAMAD  (1).png' // Importing an image to be displayed in the Home component
 
 function Home() {
   useEffect(() => { // useEffect hook to run an animation when the component mounts
