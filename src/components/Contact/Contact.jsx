@@ -55,7 +55,7 @@ function Contact() {
               <i className="ri-mail-line contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-date">abdsamad.mesrar.9@gmail.com</span>
-              <a href="mailto:abdsamad.mesrar.9@gmail.com" className="contact__button">Write me <i className="ri-arrow-right-circle-fill contact_button-icon"></i></a>
+              <a href="mailto:abdsamad.mesrar.9@gmail.com" target="_blank" className="contact__button">Write me <i className="ri-arrow-right-circle-fill contact_button-icon"></i></a>
             </div>
 
             {/* Second contact card for WhatsApp */}
@@ -63,7 +63,7 @@ function Contact() {
               <i className="ri-whatsapp-line contact__card-icon"></i>
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-date">+212 0626249432</span>
-              <a href="https://api.whatsapp.com/send/?phone=2120626249432&text&type=phone_number&app_absent=0" className="contact__button">Write me <i className="ri-arrow-right-circle-fill contact_button-icon"></i></a>
+              <a href="https://api.whatsapp.com/send/?phone=2120626249432&text&type=phone_number&app_absent=0" target="_blank" className="contact__button">Write me <i className="ri-arrow-right-circle-fill contact_button-icon"></i></a>
             </div>
 
             {/* Third contact card for Twitter */}
@@ -71,7 +71,7 @@ function Contact() {
               <i className="ri-twitter-x-line contact__card-icon"></i>
               <h3 className="contact__card-title">twitter</h3>
               <span className="contact__card-date">@ABDESSAMAD51194</span>
-              <a href="https://twitter.com/ABDESSAMAD51194" className="contact__button">Write me <i className="ri-arrow-right-circle-fill contact_button-icon"></i></a>
+              <a href="https://twitter.com/ABDESSAMAD51194" target="_blank" className="contact__button">Write me <i className="ri-arrow-right-circle-fill contact_button-icon"></i></a>
             </div>
           </div>
         </div>

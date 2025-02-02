@@ -38,13 +38,16 @@ function Date() {
           loop={Infinity} // Infinite loop of text change
           wrapper="b" // Wrap the text in a <b> tag
           steps={[
-            ' Front-end Developer💻',
+            ' UI/UX Designer 🎨',
             1000, // Duration for the first text
-            'UI/UX Designer 🎨',
-            1000, // Duration for the second text
+            'Front-end Developer💻',
+            1000,
+             // Duration for the second text
             'graphic Designer 🎨',
             1000, // Duration for the second text
             'video editor 🎥',
+            1000,
+            'wordpress developer 💻',
             1000, // Duration for the second text
           ]}
         />
@@ -57,8 +60,10 @@ function Date() {
       </p>
     
       {/* Button to say hello with an SVG icon */}
+      <a  href="https://api.whatsapp.com/send/?phone=2120626249432&text&type=phone_number&app_absent=0" target="_blank">
       <button className="button" id="cv">
-        Say hello
+      Say hello
+    
         <svg
           className="button__icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -79,6 +84,7 @@ function Date() {
           ></path>
         </svg>
       </button>
+      </a>
     </div>
   );
 }
