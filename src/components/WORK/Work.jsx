@@ -26,6 +26,7 @@ function Work() {  // Defining the functional component named 'Work'
       <section className="section_work work" id="work"> 
         <br />  
         <h2 className="section__title " id="Portfolio"> 
+        works
         </h2>
         <span className="section__subtitle" id="section__subtitle">Most recent works</span> 
     <Works></Works>  
